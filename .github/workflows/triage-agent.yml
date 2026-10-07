@@ -46,6 +46,8 @@ jobs:
 
       - name: Run triage agent
         uses: "anthropics/claude-code-action@0ee1beea589a67d33340072691a5d42abec7ae6b"
+        env:
+          ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
         with:
           prompt: |
             # Triage Agent — System Prompt
